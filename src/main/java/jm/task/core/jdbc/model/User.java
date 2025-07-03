@@ -12,7 +12,7 @@ public class User {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "first_name")
+    @Column(name = "name")
     private String name;
 
     @Column(name = "last_name")
