@@ -10,8 +10,7 @@ import org.hibernate.Transaction;
 import java.util.List;
 
 public class UserDaoHibernateImpl implements UserDao {
-    private Util util = new Util();
-    private SessionFactory sessionFactory = util.getSessionFactory();
+    private SessionFactory sessionFactory = new Util().getSessionFactory();
 
     public UserDaoHibernateImpl() {
 
@@ -27,9 +26,7 @@ public class UserDaoHibernateImpl implements UserDao {
                     id BIGINT AUTO_INCREMENT PRIMARY KEY, 
                     name VARCHAR(50) NOT NULL, 
                     last_name VARCHAR(50) NOT NULL, 
-                    age TINYINT NOT NULL
-                ) 
-            """).executeUpdate();
+                    age TINYINT NOT NULL)""").executeUpdate();
             transaction.commit();
         } catch (Exception e) {
             e.printStackTrace();
