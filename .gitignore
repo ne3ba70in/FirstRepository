@@ -1,0 +1,14 @@
+# IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Build
+target/
+bin/
+*.jar
+
+# System
+.DS_Store
+*.log
